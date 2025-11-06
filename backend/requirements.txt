@@ -1,5 +1,10 @@
+Flask
+flask-cors
 streamlit
 pdfplumber
 openai
+groq
 pandas
-Flask
+boto3
+python-dotenv
+gunicorn
