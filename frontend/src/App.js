@@ -150,7 +150,7 @@ function App() {
     setOutput(null);
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/upload", {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/upload`, {
         method: "POST",
         body: formData,
       });
