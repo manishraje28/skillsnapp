@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: skillsnap-backend
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_REGION
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: S3_BUCKET_NAME
+        sync: false
+      - key: DYNAMODB_TABLE_NAME
+        sync: false

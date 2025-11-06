@@ -7,6 +7,16 @@ from ai_recommendation import generate_recommendations
 app = Flask(__name__)
 CORS(app)  # allows frontend (React) to talk to backend
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "message": "SkillSnap API is running!",
+        "status": "healthy",
+        "endpoints": {
+            "/upload": "POST - Upload and analyze resume"
+        }
+    })
+
 @app.route("/upload", methods=["POST"])
 def upload_resume():
     try:
@@ -50,4 +60,6 @@ def upload_resume():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=False)
