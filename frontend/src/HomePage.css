@@ -1,0 +1,314 @@
+/* GLOBAL STYLES & FONT */
+.homepage-container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background-color: #f9fafb; /* Very Light Gray Background */
+  font-family: 'Inter', sans-serif;
+  color: #1f2937; /* Dark Gray Text */
+}
+
+/* --- INTRO SECTION (Hero) --- */
+.homepage-intro-section {
+  max-width: 72rem;
+  margin: 3rem auto 6rem auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media (min-width: 992px) {
+  .homepage-intro-section {
+    flex-direction: row; 
+    text-align: left;
+  }
+}
+
+.homepage-intro-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.homepage-intro-section h1 {
+  font-size: 3rem; 
+  font-weight: 800;
+  /* New Gradient: Professional Indigo/Violet */
+  background: linear-gradient(135deg, #6366f1, #4f46e5); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.homepage-intro-section p {
+  font-size: 1.25rem;
+  color: #6b7280; /* Muted gray for description */
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Get Started Button */
+.get-started-button {
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #6366f1; /* Primary Indigo */
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.get-started-button:hover {
+  background-color: #4f46e5; /* Darker Indigo on hover */
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Image styling */
+.homepage-intro-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.homepage-intro-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+}
+
+/* --- INFO CARDS HEADER --- */
+.homepage-header {
+  max-width: 72rem;
+  margin: 4rem auto 3rem auto;
+  text-align: center;
+}
+
+.homepage-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  /* Gradient matching Hero */
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homepage-header p {
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+/* --- INFO CARDS GRID --- */
+.homepage-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .homepage-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+    .homepage-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Individual card */
+.homepage-card {
+  background-color: #ffffff; /* Pure white card background */
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+  border-left: 5px solid #e5e7eb; /* Subtle vertical line accent */
+  transition: all 0.3s ease;
+}
+
+.homepage-card:hover {
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15); /* Primary color hover shadow */
+  transform: translateY(-5px);
+  border-left: 5px solid #6366f1; /* Primary color on hover */
+}
+
+/* Icon in card */
+.homepage-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Card title */
+.homepage-card h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937; 
+}
+
+/* Card description */
+.homepage-card p {
+  font-size: 1rem;
+  color: #6b7280; 
+  line-height: 1.6;
+}
+
+/* -------- Testimonials Section -------- */
+
+.testimonials-section {
+  text-align: center;
+  padding: 6rem 1rem;
+  font-family: "Inter", sans-serif;
+  background-color: #f3f4f6; /* Slightly darker background for this section */
+  margin-top: 6rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  /* Gradient matching Hero/Header */
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: #ffffff; 
+  border-radius: 15px;
+  padding: 2rem;
+  width: 320px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+  border-color: #6366f1;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #818cf8; /* Light accent border */
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-feedback {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #1f2937; 
+  margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.testimonial-card span {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.faq-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f9fafc;
+  margin-top: 2rem;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.faq-subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.faq-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.faq-answer {
+  margin-top: 0.75rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.faq-arrow {
+  font-size: 1rem;
+  color: #888;
+}
+
+.faq-item.active .faq-question {
+  color: #4a4af4;
+}
+
+.faq-item.active .faq-arrow {
+  color: #4a4af4;
+}

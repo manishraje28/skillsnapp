@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import time
-from backend.aws_handler import upload_fileobj_to_s3, generate_presigned_url, extract_text_from_s3_file, save_recommendation_to_dynamodb
+from aws_handler import upload_fileobj_to_s3, generate_presigned_url, extract_text_from_s3_file, save_recommendation_to_dynamodb
 from ai_recommendation import generate_recommendations
 
 app = Flask(__name__)
