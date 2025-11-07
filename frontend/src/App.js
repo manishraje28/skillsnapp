@@ -281,9 +281,9 @@ function App() {
 
         {/* NAV BUTTONS */}
         <div className="header-buttons">
-          <button className="btn login-btn" onClick={() => setShowLogin(true)}>
+          {/* <button className="btn login-btn" onClick={() => setShowLogin(true)}>
             Login
-          </button>
+          </button> */}
           <button className="btn home-btn" onClick={() => setCurrentPage("home")}>
             Home
           </button>
